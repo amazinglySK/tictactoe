@@ -1,0 +1,18 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "A simple tictactoe game made with socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "amazinglySK",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.12",
+    "socket.io": "^4.1.3"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}

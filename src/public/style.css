@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;600&family=Rubik+Mono+One&display=swap");
+
+:root {
+  --eerie-black: #151515ff;
+  --cinnabar: #e94f37ff;
+  --dark-blue-gray: #575d90ff;
+  --mint-green: #82ff9eff;
+  --canary: #fffd98ff;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.joinScreen {
+  visibility: hidden;
+  font-family: "Azeret Mono", monospace;
+  font-weight: 400;
+  z-index: 50;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: honeydew;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waitScreen {
+  visibility: hidden;
+  text-align: center;
+  font-family: "Azeret Mono", monospace;
+  font-weight: 600;
+  z-index: 40;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: honeydew;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.endScreen {
+  visibility: hidden;
+  font-family: "Azeret Mono", monospace;
+  font-weight: 600;
+  position: fixed;
+  display: flex;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background: honeydew;
+  justify-content: center;
+  align-items: center;
+}
+
+.moveScreen {
+  visibility: hidden;
+  font-family: "Azeret Mono", monospace;
+  font-weight: 600;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background: rgba(240, 255, 240, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+section > button {
+  font-family: "Azeret Mono", monospace;
+  margin-top: 1%;
+}
+
+.accept-btn {
+  display: none;
+}
+.deny-btn {
+  display: none;
+}
+
+p {
+  font-size: 3rem;
+}
+
+.wrapper {
+  text-align: center;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.wrapper > p {
+  font-family: "Azeret Mono", monospace;
+  font-size: 4rem;
+}
+
+input[type="text"] {
+  font-family: "Azeret Mono", monospace;
+  text-align: center !important;
+  border-style: solid;
+  border-width: 0.15em;
+  border-radius: 20px;
+  font-size: 1.6rem;
+  height: 3rem;
+  width: 80%;
+  margin: 0.5rem;
+}
+::placeholder {
+  color: gray;
+  text-align: center;
+}
+
+input:focus {
+  border-color: rgba(255, 145, 0, 0.959);
+  border-width: 0.15em;
+  outline: none;
+}
+
+#nickname {
+  margin-bottom: 1rem;
+}
+
+button {
+  font-family: "Azeret Mono", monospace;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: bisque;
+  border-radius: 10px;
+  height: 4rem;
+  width: 20%;
+}
+
+.create-game-btn {
+  width: 50%;
+  height: 4rem;
+}
+
+.join {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  padding: 1rem 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.opponent > p {
+  font-size: 1.6rem;
+}
+
+.main__grid {
+  background-color: bisque;
+  height: 700px;
+  width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.tile {
+  font-family: "Rubik Mono One", sans-serif;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all ease-in-out 90ms;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.9);
+}

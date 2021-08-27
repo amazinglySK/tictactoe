@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>tictactoe</title>
+  </head>
+  <body>
+    <section class="joinScreen">
+      <div class="wrapper">
+        <input type="text" id="nickname" placeholder="Enter your nickname" />
+        <div class="join">
+          <input type="text" id="room-code" placeholder="Enter the game code" />
+          <button class="join-btn">Join</button>
+        </div>
+        <p>OR</p>
+        <button class="create-game-btn">Create A Game</button>
+      </div>
+    </section>
+    <section class="waitScreen">
+      <p id="code"></p>
+      <p>Waiting for the second player...</p>
+    </section>
+    <section class="endScreen">
+      <p class="match-status"></p>
+      <button class="replay-btn">Replay?</button>
+      <button class="accept-btn">Accept</button>
+      <button class="deny-btn">Deny</button>
+      <p class="response-text"></p>
+    </section>
+    <section class="moveScreen">
+      <p>Waiting for the other player to move</p>
+    </section>
+    <main>
+      <div class="opponent">
+        <p>Your opponent is:</p>
+        <p class="opponentName"></p>
+      </div>
+      <div class="main__grid">
+        <div class="tile top-left"></div>
+        <div class="tile top"></div>
+        <div class="tile top-right"></div>
+        <div class="tile left"></div>
+        <div class="tile center"></div>
+        <div class="tile right"></div>
+        <div class="tile bottom-left"></div>
+        <div class="tile bottom"></div>
+        <div class="tile bottom-right"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.socket.io/3.1.3/socket.io.min.js"
+      integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
