@@ -18,6 +18,13 @@ body {
   box-sizing: border-box;
 }
 
+section,
+main {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .joinScreen {
   font-family: "Azeret Mono", monospace;
   font-weight: 400;
@@ -25,7 +32,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: var(--eerie-black);
+  background-image: url("./assets/hero.svg");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,8 +55,8 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: var(--eerie-black);
   display: flex;
+  background-image: url("./assets/wait.svg");
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -63,8 +70,8 @@ body {
   z-index: 30;
   width: 100%;
   height: 100%;
+  background-image: url("./assets/end.svg");
   flex-direction: column;
-  background: var(--eerie-black);
   justify-content: center;
   align-items: center;
 }
@@ -104,6 +111,7 @@ section > button {
 }
 .deny-btn {
   display: none;
+  margin-top: 3rem;
 }
 
 p {
@@ -176,7 +184,7 @@ button {
 }
 
 main {
-  background-color: var(--eerie-black);
+  background-image: url("./assets/game.svg");
   padding: 1rem 0;
   width: 100%;
   height: 100vh;
@@ -221,4 +229,8 @@ main {
 .tile:hover {
   transform: scale(1.05);
   opacity: 90%;
+}
+
+.response-text {
+  margin-top: 5rem;
 }

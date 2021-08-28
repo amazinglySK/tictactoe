@@ -158,7 +158,8 @@ $(document).ready(() => {
 });
 
 /* 
-TODO :  Style the entire website
-        Choose a good font
-        Add link sharing support (Probably with express)
+TODO :  Add link sharing support (Probably with express)
+        Check for blank responses
+        Add p tag with instruction as to refresh
+        Handle empty rooms
 */
