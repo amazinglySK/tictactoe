@@ -213,6 +213,10 @@ main {
   border-radius: 30px;
 }
 
+.note {
+  font-size: 1rem;
+}
+
 .tile {
   font-family: "Rubik Mono One", sans-serif;
   border-radius: 20px;

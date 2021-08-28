@@ -40,6 +40,8 @@ $(document).ready(() => {
     let code = $("#room-code").val();
     if (code == "" || code == " " || code == undefined || code == null) {
       alert("Please enter a code");
+    } else if (nickname == "" || nickname == " ") {
+      alert("Please enter a nickname!!");
     } else {
       socket.emit("join_game", code, nickname);
     }
@@ -48,7 +50,8 @@ $(document).ready(() => {
   $(".create-game-btn").click((e) => {
     index++;
     let nickname = $("#nickname").val();
-    socket.emit("create_game", nickname);
+    if (nickname != "" && nickname != " ") socket.emit("create_game", nickname);
+    else alert("Please enter your nickname");
   });
 
   $(".tile").click((e) => {
@@ -124,11 +127,11 @@ $(document).ready(() => {
     $(".deny-btn").show();
 
     $(".deny-btn").click((e) => {
-      socket.emit("replay_request_deny", code);
+      socket.emit("deny", code);
     });
 
     $(".accept-btn").click((e) => {
-      socket.emit("replay_request_accept", code);
+      socket.emit("accept", code);
     });
   });
 

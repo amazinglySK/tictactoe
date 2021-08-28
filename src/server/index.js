@@ -152,7 +152,7 @@ io.on("connection", (socket) => {
     socket.to(code).emit("replay_request", code);
   });
 
-  socket.on("replay_request_accept", (code) => {
+  socket.on("accept", (code) => {
     resetMap();
     let sockets = Array.from(
       Object.fromEntries(io.sockets.adapter.rooms)[code]
@@ -161,13 +161,23 @@ io.on("connection", (socket) => {
     io.in(code).emit("replay_start", code, starterSocket);
   });
 
-  socket.on("replay_request_deny", (code) => {
+  socket.on("deny", (code) => {
     resetMap();
     io.in(code).emit("end_game", code);
     io.socketsLeave(code);
     delete roomData[code];
   });
+  function removeDeadRooms() {
+    let room_array = [...io.sockets.adapter.rooms.keys()];
+    for (const property in roomData) {
+      if (!room_array.includes(property)) {
+        delete roomData[property];
+      }
+    }
+  }
+
   socket.on("disconnect", () => {
     console.log(`User ${socket.id} disconnected`);
+    removeDeadRooms();
   });
 });

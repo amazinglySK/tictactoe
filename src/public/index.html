@@ -24,15 +24,19 @@
             placeholder="Enter the game code"
             required
           />
-          <button class="join-btn">Join</button>
+          <button type="submit" class="join-btn">Join</button>
         </div>
         <p>OR</p>
-        <button class="create-game-btn">Create A Game</button>
+        <button type="submit" class="create-game-btn">Create A Game</button>
       </div>
     </section>
     <section class="waitScreen">
       <p id="code"></p>
       <p>Waiting for the second player...</p>
+      <p class="note">
+        Waiting for too long? Press Ctrl+R or refresh your tab to exit from this
+        game room !
+      </p>
     </section>
     <section class="endScreen">
       <p class="match-status"></p>
@@ -43,6 +47,10 @@
     </section>
     <section class="moveScreen">
       <p>Waiting for the other player to move</p>
+      <p class="note">
+        Waiting for too long? The opponent might have disconnected. Press Ctrl+R
+        or refresh your tab.
+      </p>
     </section>
     <main>
       <div class="opponent">
