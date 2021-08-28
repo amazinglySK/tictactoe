@@ -83,7 +83,7 @@ $(document).ready(() => {
       $(".moveScreen").hide();
     }
 
-    $(".opponentName").text(opponents[index]);
+    $(".opponentName").text(`Your opponent is : ${opponents[index]}`);
     $(".endScreen").hide();
     $(".joinScreen").hide();
     $(".waitScreen").hide();

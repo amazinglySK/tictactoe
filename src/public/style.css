@@ -19,21 +19,28 @@ body {
 }
 
 .joinScreen {
-  visibility: hidden;
   font-family: "Azeret Mono", monospace;
   font-weight: 400;
   z-index: 50;
   position: fixed;
   width: 100%;
   height: 100%;
-  background: honeydew;
+  background: var(--eerie-black);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.joinScreen h1 {
+  margin-top: 0;
+  font-size: 6rem;
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 500;
+  color: var(--mint-green);
+}
+
 .waitScreen {
-  visibility: hidden;
   text-align: center;
   font-family: "Azeret Mono", monospace;
   font-weight: 600;
@@ -41,7 +48,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: honeydew;
+  background: var(--eerie-black);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +56,6 @@ body {
 }
 
 .endScreen {
-  visibility: hidden;
   font-family: "Azeret Mono", monospace;
   font-weight: 600;
   position: fixed;
@@ -58,13 +64,12 @@ body {
   width: 100%;
   height: 100%;
   flex-direction: column;
-  background: honeydew;
+  background: var(--eerie-black);
   justify-content: center;
   align-items: center;
 }
 
 .moveScreen {
-  visibility: hidden;
   font-family: "Azeret Mono", monospace;
   font-weight: 600;
   display: flex;
@@ -73,9 +78,20 @@ body {
   width: 100%;
   height: 100%;
   flex-direction: column;
-  background: rgba(240, 255, 240, 0.5);
+  background: var(--eerie-black);
+  opacity: 90%;
   justify-content: center;
   align-items: center;
+}
+
+section > p {
+  margin-top: 0;
+  color: var(--canary);
+}
+
+.wrapper > p {
+  color: var(--canary);
+  font-weight: 600;
 }
 
 section > button {
@@ -113,15 +129,16 @@ input[type="text"] {
   font-family: "Azeret Mono", monospace;
   text-align: center !important;
   border-style: solid;
-  border-width: 0.15em;
+  border-width: 0.1em;
   border-radius: 20px;
   font-size: 1.6rem;
+  font-weight: 600;
   height: 3rem;
   width: 80%;
   margin: 0.5rem;
 }
 ::placeholder {
-  color: gray;
+  color: var(--cinnabar);
   text-align: center;
 }
 
@@ -137,10 +154,12 @@ input:focus {
 
 button {
   font-family: "Azeret Mono", monospace;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  background-color: bisque;
+  background-color: var(--dark-blue-gray);
+  color: var(--canary);
   border-radius: 10px;
+  border: none;
   height: 4rem;
   width: 20%;
 }
@@ -157,6 +176,7 @@ button {
 }
 
 main {
+  background-color: var(--eerie-black);
   padding: 1rem 0;
   width: 100%;
   height: 100vh;
@@ -167,11 +187,14 @@ main {
 }
 
 .opponent > p {
+  font-family: "Azeret Mono", monospace;
+  font-weight: 600;
   font-size: 1.6rem;
+  color: var(--cinnabar);
 }
 
 .main__grid {
-  background-color: bisque;
+  background-color: var(--dark-blue-gray);
   height: 700px;
   width: 700px;
   display: grid;
@@ -188,12 +211,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 8rem;
+  background-color: var(--mint-green);
+  color: var(--cinnabar);
+  opacity: 80%;
   transition: all ease-in-out 90ms;
 }
 
 .tile:hover {
   transform: scale(1.05);
-  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 90%;
 }
