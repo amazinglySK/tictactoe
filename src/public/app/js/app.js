@@ -1,7 +1,7 @@
 const socket = io("http://localhost:3000");
 
 socket.on("connect_error", () => {
-  window.location.href = "./error.html";
+  window.location.href = "/error";
 });
 $(document).ready(() => {
   var index = 0;
