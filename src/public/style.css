@@ -142,7 +142,7 @@ input[type="text"] {
   font-size: 1.6rem;
   font-weight: 600;
   height: 3rem;
-  width: 80%;
+  width: 100%;
   margin: 0.5rem;
 }
 ::placeholder {
@@ -167,14 +167,15 @@ button {
   background-color: var(--dark-blue-gray);
   color: var(--canary);
   border-radius: 10px;
+  padding: 0.5em;
   border: none;
-  height: 4rem;
-  width: 20%;
+  height: auto;
+  width: auto;
 }
 
 .create-game-btn {
-  width: 50%;
-  height: 4rem;
+  width: auto;
+  height: auto;
 }
 
 .join {
@@ -237,4 +238,20 @@ main {
 
 .response-text {
   margin-top: 5rem;
+}
+
+.error {
+  text-align: center;
+  margin: 0;
+  padding: 0 20%;
+  font-size: 4rem;
+  font-family: "Azeret Mono", monospace;
+  font-weight: 600;
+  color: var(--mint-green);
+}
+
+.errorSection {
+  margin: 0;
+  padding: 0;
+  background-image: url("./assets/error.svg");
 }
