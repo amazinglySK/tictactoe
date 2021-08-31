@@ -1,4 +1,6 @@
-const socket = io("https://tictactoeio-server.herokuapp.com/"); // Note : You won't be able to connect to this server. Change the above link to http://localhost:3000 to run the app properly.
+const socket = io("https://tictactoeio-server.herokuapp.com/", {
+  withCredentials: true,
+}); // Note : You won't be able to connect to this server. Change the above link to http://localhost:3000 to run the app properly.
 
 socket.on("connect_error", () => {
   window.location.href = "/error";
