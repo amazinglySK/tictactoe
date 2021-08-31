@@ -1,9 +1,6 @@
-require("dotenv").config();
-
 const PORT = process.env.PORT;
 
-const io = require("socket.io")(PORT, {
-  // TODO : change the origin to localhost:5500 for dev purposes
+const io = require("socket.io")(PORT || 3000, {
   cors: {
     origin: "*",
   },
@@ -91,7 +88,7 @@ io.on("connection", (socket) => {
     else if (className == "bottom-left") movemap[2][0] = 1;
     else if (className == "bottom") movemap[2][1] = 1;
     else if (className == "bottom-right") movemap[2][2] = 1;
-    else console.log("Something completel unexpected happened.. :(");
+    else console.log("Something completely unexpected happened.. :(");
   }
 
   // checking for winning conditions

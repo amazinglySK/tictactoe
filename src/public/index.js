@@ -11,6 +11,8 @@ app.get("/error", (req, res) => {
   res.sendFile("error.html", { root: `${__dirname}/app` });
 });
 
-app.listen(5000, () => {
-  console.log(`Got to http://localhost:5000`);
+const PORT = process.env.PORT;
+
+app.listen(PORT || 5000, () => {
+  console.log(`App has started.`);
 });

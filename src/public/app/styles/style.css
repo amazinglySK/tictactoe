@@ -243,10 +243,9 @@ main {
 .error {
   text-align: center;
   margin: 0;
-  padding: 0 20%;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-family: "Azeret Mono", monospace;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--mint-green);
 }
 
@@ -254,4 +253,26 @@ main {
   margin: 0;
   padding: 0;
   background-image: url("/assets/error.svg");
+}
+.error__container {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+.error_hero {
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .error__container {
+    flex-direction: column;
+  }
+
+  .error_hero {
+    width: 80%;
+  }
 }
