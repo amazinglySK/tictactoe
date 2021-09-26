@@ -1,4 +1,4 @@
-const socket = io("https://tictactoeio-server.herokuapp.com"); // Note : You won't be able to connect to this server. Change the above link to http://localhost:3000 to run the app properly.
+const socket = io("https://tictactoeio-server.herokuapp.com"); // Note : You won't be able to connect to this server. Change the above link to https://localhost:3000 to run the app properly.
 
 socket.on("connect_error", () => {
   window.location.href = "/error";
@@ -79,6 +79,17 @@ $(document).ready(() => {
   socket.on("game_created", (code) => {
     $(".joinScreen").hide();
     $("#code").text(`Send this code to your friend : ${code}`);
+
+    $("#copy").click(async (e) => {
+      navigator.clipboard
+        .writeText(code)
+        .then(() => {
+          alert("The code is copied to clipboard");
+        })
+        .catch((err) => {
+          alert("Some error occured.. Please contact @amazinglySK");
+        });
+    });
   });
 
   socket.on("start", (code, starter, opponents) => {

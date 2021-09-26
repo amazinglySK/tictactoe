@@ -184,6 +184,18 @@ button {
   justify-content: space-between;
 }
 
+.container__code {
+  display: flex;
+}
+#code {
+  color: var(--canary);
+  font-size: 2.5rem;
+}
+
+.copy-btn {
+  margin-left: 1rem;
+}
+
 main {
   background-image: url("/assets/game.svg");
   padding: 1rem 0;
