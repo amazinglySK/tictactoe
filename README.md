@@ -4,7 +4,7 @@
 
 A simple online version of the all time legend game 😂 tic-tac-toe and that too multiplayer. ❌⭕
 
-App available at :
+App available at : https://tictactoeio.netlify.app/
 
 ## Technologies used
 
