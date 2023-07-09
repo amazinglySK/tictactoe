@@ -1,3 +1,5 @@
+> This app is now archived because of the lack of resources to host it.
+
 # TIC-TAC-TOE
 
 ## Introduction
